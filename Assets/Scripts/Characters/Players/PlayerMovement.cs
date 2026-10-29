@@ -4,22 +4,28 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
+
+    public static PlayerMovement Instance { get; private set; }
+
     // Stats
     public int walkSpeed;
+    [HideInInspector] public bool canMove;
 
     [SerializeField] private Vector3 movementDirection;
 
     private Vector2 movementInput;
 
     // Components and Managers
-    private Rigidbody2D rb;
+    [HideInInspector] public Rigidbody2D rb;
+
     private InputManager inputManager;
 
     private void Awake() {
-
         rb = GetComponent<Rigidbody2D>();
+        canMove = true;
 
         inputManager = InputManager.Instance;
+        Instance = this;
     }
 
     private void Update() {
@@ -30,7 +36,8 @@ public class PlayerMovement : MonoBehaviour
 
     private void FixedUpdate() {
 
-        rb.linearVelocity = movementInput * walkSpeed;
+        if (canMove)
+            rb.linearVelocity = movementInput * walkSpeed;
 
     }
 
