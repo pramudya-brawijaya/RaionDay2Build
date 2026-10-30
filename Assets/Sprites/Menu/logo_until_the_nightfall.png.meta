@@ -1,0 +1,442 @@
+fileFormatVersion: 2
+guid: f90d27980ba6bd54c872dba25b4b6216
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -4577264714519924032
+    second: logo_until_the_nightfall_0
+  - first:
+      213: -6267373276699844217
+    second: logo_until_the_nightfall_1
+  - first:
+      213: 2007614399517887961
+    second: logo_until_the_nightfall_2
+  - first:
+      213: -1161611488928418433
+    second: logo_until_the_nightfall_3
+  - first:
+      213: -6567649202132848438
+    second: logo_until_the_nightfall_4
+  - first:
+      213: 2641239762997881176
+    second: logo_until_the_nightfall_5
+  - first:
+      213: 4591404350512449599
+    second: logo_until_the_nightfall_6
+  - first:
+      213: 8267531400279192084
+    second: logo_until_the_nightfall_7
+  - first:
+      213: 2313960667807956411
+    second: logo_until_the_nightfall_8
+  - first:
+      213: -6895036423578735774
+    second: logo_until_the_nightfall_9
+  - first:
+      213: 729721941565649776
+    second: logo_until_the_nightfall_10
+  - first:
+      213: -7288608753360935425
+    second: logo_until_the_nightfall_11
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: logo_until_the_nightfall_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 209
+        width: 139
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0c23c185ef94a70c0800000000000000
+      internalID: -4577264714519924032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_until_the_nightfall_1
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 206
+        width: 143
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 781a787f531d509a0800000000000000
+      internalID: -6267373276699844217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_until_the_nightfall_2
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 221
+        width: 125
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9dd0939d8aa7cdb10800000000000000
+      internalID: 2007614399517887961
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_until_the_nightfall_3
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 248
+        width: 71
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f75b86b518021efe0800000000000000
+      internalID: -1161611488928418433
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_until_the_nightfall_4
+      rect:
+        serializedVersion: 2
+        x: 485
+        y: 221
+        width: 113
+        height: 164
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ac07e79f8d50bd4a0800000000000000
+      internalID: -6567649202132848438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_until_the_nightfall_5
+      rect:
+        serializedVersion: 2
+        x: 617
+        y: 284
+        width: 106
+        height: 106
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8592020129197a420800000000000000
+      internalID: 2641239762997881176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_until_the_nightfall_6
+      rect:
+        serializedVersion: 2
+        x: 293
+        y: 173
+        width: 134
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f384a743ee1f7bf30800000000000000
+      internalID: 4591404350512449599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_until_the_nightfall_7
+      rect:
+        serializedVersion: 2
+        x: 44
+        y: 26
+        width: 86
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 412770b510c2cb270800000000000000
+      internalID: 8267531400279192084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_until_the_nightfall_8
+      rect:
+        serializedVersion: 2
+        x: 131
+        y: 14
+        width: 44
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bbd3beca7f6dc1020800000000000000
+      internalID: 2313960667807956411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_until_the_nightfall_9
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 26
+        width: 77
+        height: 104
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26ba53b77e8ef40a0800000000000000
+      internalID: -6895036423578735774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_until_the_nightfall_10
+      rect:
+        serializedVersion: 2
+        x: 254
+        y: 14
+        width: 227
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07334d75d3e702a00800000000000000
+      internalID: 729721941565649776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: logo_until_the_nightfall_11
+      rect:
+        serializedVersion: 2
+        x: 467
+        y: 0
+        width: 209
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ff56e1d94f8a9da90800000000000000
+      internalID: -7288608753360935425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      logo_until_the_nightfall_0: -4577264714519924032
+      logo_until_the_nightfall_1: -6267373276699844217
+      logo_until_the_nightfall_10: 729721941565649776
+      logo_until_the_nightfall_11: -7288608753360935425
+      logo_until_the_nightfall_2: 2007614399517887961
+      logo_until_the_nightfall_3: -1161611488928418433
+      logo_until_the_nightfall_4: -6567649202132848438
+      logo_until_the_nightfall_5: 2641239762997881176
+      logo_until_the_nightfall_6: 4591404350512449599
+      logo_until_the_nightfall_7: 8267531400279192084
+      logo_until_the_nightfall_8: 2313960667807956411
+      logo_until_the_nightfall_9: -6895036423578735774
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

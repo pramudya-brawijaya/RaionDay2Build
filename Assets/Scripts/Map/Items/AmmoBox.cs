@@ -2,18 +2,18 @@ using UnityEngine;
 
 public class AmmoBox : Item
 {
-    public override void OnPick()
+    public override void OnUse()
     {
         PlayerInventory playerInventory = PlayerInventory.Instance;
-
-        playerInventory.ammoCount += 20;
-
-        int index = playerInventory.inventory.IndexOf(this);
+        CharacterStat characterStat = playerInventory.transform.GetComponent<CharacterStat>();
+        int index = playerInventory.inventory.IndexOf(playerInventory.equippedItem);
 
         if (index == -1)
             return;
 
+        playerInventory.ammoCount += 20;
         playerInventory.inventory[index] = null;
+        playerInventory.equippedItem = null;
         Destroy(gameObject);
 
         HUDManager.Instance.UpdateInventory();

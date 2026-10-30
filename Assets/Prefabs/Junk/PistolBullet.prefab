@@ -108,6 +108,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Bullet
   <damage>k__BackingField: 1
   <speed>k__BackingField: 20
+  <isPlayerBullet>k__BackingField: 1
+  timer: 30
 --- !u!61 &6216332460369619655
 BoxCollider2D:
   m_ObjectHideFlags: 0

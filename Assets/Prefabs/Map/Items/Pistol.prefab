@@ -88,6 +88,8 @@ MonoBehaviour:
   <sprite>k__BackingField: {fileID: -6972989186242419219, guid: 55587a575ce1cdf428fdfdd2324220b9, type: 3}
   <bulletPrefab>k__BackingField: {fileID: 2864606702694498201, guid: d0e0c4cb371ea3043aa27256411acdde, type: 3}
   <bulletTransform>k__BackingField: {fileID: 2828330117575171732}
+  <fireRate>k__BackingField: 0.25
+  <ammoPerUse>k__BackingField: 1
 --- !u!1 &4606412216918523270
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,12 +18,10 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] private Transform inventoryTransform;
 
     private InputManager inputManager;
-    private HUDManager hudManager;
 
     private void Awake() {
         Instance = this;
         inputManager = InputManager.Instance;
-        hudManager = HUDManager.Instance;
 
         inputManager.PickItem.performed += PickItem;
         inputManager.DropItem.performed += DropItem;
@@ -34,8 +32,8 @@ public class PlayerInventory : MonoBehaviour
 
         currentSlot = 1;
         ammoCount = 20;
-        hudManager.UpdateAmmo();
-        hudManager.UpdateInventory();
+        HUDManager.Instance.UpdateAmmo();
+        HUDManager.Instance.UpdateInventory();
     }
 
     private void DropItem(InputAction.CallbackContext context) {
@@ -57,7 +55,7 @@ public class PlayerInventory : MonoBehaviour
         equippedItem.OnDrop();
         equippedItem = null;
 
-        hudManager.UpdateInventory();
+        HUDManager.Instance.UpdateInventory();
     }
 
     private void EquipSlot(int slot) {
@@ -77,7 +75,7 @@ public class PlayerInventory : MonoBehaviour
             equippedItem.OnEquip();
         }
 
-        hudManager.UpdateInventory();
+        HUDManager.Instance.UpdateInventory();
 
     }
 
@@ -131,7 +129,7 @@ public class PlayerInventory : MonoBehaviour
         item.transform.SetParent(inventoryTransform);
         item.gameObject.SetActive(false);
         item.OnPick();
-        hudManager.UpdateInventory();
+        HUDManager.Instance.UpdateInventory();
         UpdatePickUpNotification();
         EquipSlot(currentSlot); // prevent item from not appearing when picked up
     }

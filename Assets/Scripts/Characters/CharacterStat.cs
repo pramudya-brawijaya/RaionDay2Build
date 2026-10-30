@@ -34,7 +34,6 @@ public class CharacterStat : MonoBehaviour
     [field: SerializeField] public int currentHP {get; private set;}
     private bool isPlayer;
 
-    public static event Action OnPlayerDeath;
     public void ModifyHP(int hpChange) {
 
         // Parameter hpChange akan ditambah dalam currentHP, jika ingin
@@ -49,10 +48,15 @@ public class CharacterStat : MonoBehaviour
         if (isPlayer)
             HUDManager.Instance.UpdateHealth(currentHP);
 
-        if (currentHP <= 0)
-        {
-            Debug.Log("3. HP Player habis! Meneriakkan event OnPlayerDeath...");
-            OnPlayerDeath?.Invoke();
+        if (currentHP <= 0) {
+            if (isPlayer) {
+                PlayerMovement.Instance.canMove = false;
+                MenuManager.Instance.EnableGameOverMenu();
+            } else {
+               WaveManager.Instance.RegisterDeath(gameObject); 
+            }
+
+            Destroy(gameObject);
         }
     }
 
