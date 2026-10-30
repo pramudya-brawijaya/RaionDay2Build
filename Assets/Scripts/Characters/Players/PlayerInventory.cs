@@ -6,13 +6,16 @@ public class PlayerInventory : MonoBehaviour
 {
     public static PlayerInventory Instance { get; private set; }
 
+    public int ammoCount;
     public List<Item> inventory = new List<Item> {null, null, null};
     public List<Item> pickableItems = new List<Item>();
     public int currentSlot { get; private set; }
+    public Item equippedItem;
+
+    private Notification currentItemName;
+    private Notification currentPickUpNotification;
 
     [SerializeField] private Transform inventoryTransform;
-
-    private Item equippedItem;
 
     private InputManager inputManager;
     private HUDManager hudManager;
@@ -30,6 +33,8 @@ public class PlayerInventory : MonoBehaviour
         inputManager.InvSlot3.performed += action => EquipSlot(3);
 
         currentSlot = 1;
+        ammoCount = 20;
+        hudManager.UpdateAmmo();
         hudManager.UpdateInventory();
     }
 
@@ -49,6 +54,7 @@ public class PlayerInventory : MonoBehaviour
         equippedItem.transform.SetParent(GameObject.Find("Map/Items").transform);
         equippedItem.SetCollider(true);
         equippedItem.gameObject.SetActive(true);
+        equippedItem.OnDrop();
         equippedItem = null;
 
         hudManager.UpdateInventory();
@@ -68,9 +74,41 @@ public class PlayerInventory : MonoBehaviour
             equippedItem.transform.localPosition = Vector3.zero;
             equippedItem.transform.localRotation = Quaternion.identity;
             equippedItem.gameObject.SetActive(true);
+            equippedItem.OnEquip();
         }
 
         hudManager.UpdateInventory();
+
+    }
+
+    public void UpdatePickUpNotification() {
+
+        if (currentItemName != null)
+            Destroy(currentItemName.gameObject);
+
+        if (currentPickUpNotification != null)
+            Destroy(currentPickUpNotification.gameObject);
+
+        if (pickableItems.Count == 0)
+        {
+            currentItemName = null;
+            currentPickUpNotification = null;
+            return;
+        }
+
+        Item item = pickableItems[pickableItems.Count - 1];
+
+        currentItemName = NotificationManager.Instance.Create(
+            item.itemName,
+            item.transform.position + Vector3.up * .5f,
+            -1
+        );
+
+        currentPickUpNotification = NotificationManager.Instance.Create(
+            "Press [E] to pick up item.",
+            item.transform.position + Vector3.down * .5f,
+            -1
+        );
     }
 
     private void PickItem(InputAction.CallbackContext context) {
@@ -92,7 +130,9 @@ public class PlayerInventory : MonoBehaviour
         item.SetCollider(false);
         item.transform.SetParent(inventoryTransform);
         item.gameObject.SetActive(false);
+        item.OnPick();
         hudManager.UpdateInventory();
+        UpdatePickUpNotification();
         EquipSlot(currentSlot); // prevent item from not appearing when picked up
     }
 

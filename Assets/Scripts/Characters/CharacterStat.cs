@@ -45,7 +45,7 @@ public class CharacterStat : MonoBehaviour
 
         // update hud jika player
         if (isPlayer)
-            HUDManager.Instance.UpdateHealth(maxHP, currentHP);
+            HUDManager.Instance.UpdateHealth(currentHP);
 
     }
 
