@@ -9,13 +9,20 @@ public class HUDManager : MonoBehaviour
 
     [field: SerializeField] public Transform healthHUD {get; private set;}
     [field: SerializeField] public Transform inventoryHUD {get; private set;}
+    [field: SerializeField] public Transform ammoHUD {get; private set;}
 
     private PlayerInventory playerInventory;
 
-    public void UpdateHealth(int maxHP, int newHP) {
+    public void UpdateHealth(int newHP) {
         TMP_Text hpText = healthHUD.GetComponentInChildren<TMP_Text>();
 
-        hpText.text = newHP.ToString();
+        hpText.text = "x" + newHP.ToString();
+    }
+
+    public void UpdateAmmo() {
+        TMP_Text hpText = ammoHUD.GetComponentInChildren<TMP_Text>();
+
+        hpText.text = "x" + PlayerInventory.Instance.ammoCount.ToString();
     }
 
     public void UpdateInventory() {

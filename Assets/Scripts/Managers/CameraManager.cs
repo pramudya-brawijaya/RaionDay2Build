@@ -14,9 +14,6 @@ public class CameraManager : MonoBehaviour
 
     private void Update() {
         if (attachedTransform != null)
-            cameraTransform.position = new Vector3(
-                attachedTransform.position.x,
-                attachedTransform.position.y,
-                -10); 
+            cameraTransform.position = new Vector3(attachedTransform.position.x, attachedTransform.position.y, -10); 
     }
 }

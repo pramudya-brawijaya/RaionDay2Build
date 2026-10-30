@@ -19,7 +19,15 @@ public abstract class Item : MonoBehaviour
     }
 
     public virtual void OnUse() {
-        Debug.Log("Item was used.");
+    }
+
+    public virtual void OnEquip() {
+    }
+
+    public virtual void OnPick() {
+    }
+
+    public virtual void OnDrop() {
     }
 
     protected virtual void OnTriggerEnter2D(Collider2D hitCollider)
@@ -30,6 +38,7 @@ public abstract class Item : MonoBehaviour
 
         if (!PlayerInventory.Instance.pickableItems.Contains(this))
             PlayerInventory.Instance.pickableItems.Add(this);
+            PlayerInventory.Instance.UpdatePickUpNotification();
 
     }
 
@@ -37,5 +46,6 @@ public abstract class Item : MonoBehaviour
     {
         if (hitCollider.transform.parent.gameObject.CompareTag("Player"))
             PlayerInventory.Instance.pickableItems.Remove(this);
+            PlayerInventory.Instance.UpdatePickUpNotification();
     }
 }
