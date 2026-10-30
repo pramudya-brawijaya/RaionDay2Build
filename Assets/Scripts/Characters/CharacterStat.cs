@@ -47,13 +47,12 @@ public class CharacterStat : MonoBehaviour
 
         // update hud jika player
         if (isPlayer)
+            HUDManager.Instance.UpdateHealth(currentHP);
+
+        if (currentHP <= 0)
         {
-            HUDManager.Instance.UpdateHealth(maxHP, currentHP);
-            if (currentHP <= 0)
-            {
-                Debug.Log("3. HP Player habis! Meneriakkan event OnPlayerDeath...");
-                OnPlayerDeath?.Invoke();
-            }
+            Debug.Log("3. HP Player habis! Meneriakkan event OnPlayerDeath...");
+            OnPlayerDeath?.Invoke();
         }
     }
 
