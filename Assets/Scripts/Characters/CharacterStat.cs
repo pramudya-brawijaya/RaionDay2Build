@@ -1,4 +1,6 @@
 using UnityEngine;
+using System;
+using UnityEngine.UI;
 
 /* 
 
@@ -30,9 +32,9 @@ public class CharacterStat : MonoBehaviour
 
     [field: SerializeField] public int maxHP {get; private set;}
     [field: SerializeField] public int currentHP {get; private set;}
-
     private bool isPlayer;
 
+    public static event Action OnPlayerDeath;
     public void ModifyHP(int hpChange) {
 
         // Parameter hpChange akan ditambah dalam currentHP, jika ingin
@@ -41,16 +43,23 @@ public class CharacterStat : MonoBehaviour
         // method ini dan memasuki damage dengan minus.
         // CharacterStat.ModifyHP(-2); 
 
-        currentHP = Mathf.Clamp(currentHP + hpChange, 0, maxHP); 
+        currentHP = Mathf.Clamp(currentHP + hpChange, 0, maxHP);
 
         // update hud jika player
         if (isPlayer)
+        {
             HUDManager.Instance.UpdateHealth(maxHP, currentHP);
-
+            if (currentHP <= 0)
+            {
+                Debug.Log("3. HP Player habis! Meneriakkan event OnPlayerDeath...");
+                OnPlayerDeath?.Invoke();
+            }
+        }
     }
 
     private void Awake() {
         currentHP = maxHP;
         isPlayer = gameObject.CompareTag("Player"); // apakah ini player?
     }
+
 }
