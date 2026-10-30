@@ -4,7 +4,19 @@ using UnityEngine.InputSystem;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerMovement : MonoBehaviour
 {
+    private void OnEnable()
+    {
+        CharacterStat.OnPlayerDeath += DisablePlayerMovement;
+    }
 
+    private void OnDisable()
+    {
+        CharacterStat.OnPlayerDeath -= DisablePlayerMovement;
+    }
+    private void Start()
+    {
+        EnablePlayerMovement();
+    }
     public static PlayerMovement Instance { get; private set; }
 
     // Stats
@@ -41,4 +53,15 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
+    private void DisablePlayerMovement()
+    {
+        inputManager.enabled = false;
+        rb.bodyType = RigidbodyType2D.Static;
+    }
+
+    private void EnablePlayerMovement()
+    {
+        inputManager.enabled = true;
+        rb.bodyType = RigidbodyType2D.Dynamic;
+    }
 }
