@@ -32,6 +32,37 @@ Transform:
   - {fileID: 994862806297596705}
   m_Father: {fileID: 5782767459010945121}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2478537763106911041
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7254065572316232149}
+  m_Layer: 0
+  m_Name: Inventory
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7254065572316232149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2478537763106911041}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 5782767459010945121}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3616400819159823650
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,6 +245,7 @@ GameObject:
   - component: {fileID: 3017504926907204309}
   - component: {fileID: 647822825044554811}
   - component: {fileID: 9206870175496288163}
+  - component: {fileID: 3269517232399482771}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -229,13 +261,14 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7064982115908111818}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5139910570590315272}
   - {fileID: 5501004703901706071}
+  - {fileID: 7254065572316232149}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &3017504926907204309
@@ -278,7 +311,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerMovement
   walkSpeed: 5
+  canMove: 1
   movementDirection: {x: 0, y: 0, z: 0}
+  rb: {fileID: 0}
 --- !u!114 &9206870175496288163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -293,3 +328,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::CharacterStat
   <maxHP>k__BackingField: 10
   <currentHP>k__BackingField: 10
+--- !u!114 &3269517232399482771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7064982115908111818}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 970f051917249b8419ade8b8a7a8179f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerInventory
+  inventory:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  pickableItems: []
+  inventoryTransform: {fileID: 7254065572316232149}
