@@ -14,6 +14,7 @@ public class CycleManager : MonoBehaviour
     [field: SerializeField] public Light2D globalLight { get; private set; }
 
     private int targetIntensity;
+    private bool notified;
     private HUDManager hudManager;
 
     private void Awake()
@@ -36,8 +37,14 @@ public class CycleManager : MonoBehaviour
             return;
 
         dayTimeRemaining -= Time.deltaTime;
-        
-        if (dayTimeRemaining <= 0f)
+
+        if (dayTimeRemaining <= 10f && !notified)
+        {
+            notified = true;
+            NotificationManager.Instance.Create("10 seconds left!", Vector3.zero, 5, PlayerMovement.Instance.transform);
+
+        }
+        else if (dayTimeRemaining <= 0f)
         {
             ToggleDaytime(false);
         }
@@ -49,6 +56,7 @@ public class CycleManager : MonoBehaviour
 
         if (isDay) {
 
+            notified = false;
             dayTimeRemaining = dayDuration;
             ItemManager.Instance.SpawnItems();
             StructureManager.Instance.SpawnStructures();
